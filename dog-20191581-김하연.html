@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>숨어있는 강아지 찾기</title>
+  <link href = "dog-20191581-김하연.css" type = "text/css" rel = "stylesheet">
+  <script src="./jquery-3.5.1.js"></script>
+  <!-- jquery 활용 -->
+  <script src = "dog-20191581-김하연.js"></script>
+</head>
+<body>
+  <h2>숨어있는 강아지 찾기</h2>
+  <hr>
+  <!-- <audio id="bgm" src="background.mp3" autoplay loop muted></audio>-->
+  <audio id="effect" src=""></audio>
+  <!-- 효과음을 연주 -->
+  <audio id="alarm" src="clock.mp3" loop></audio>
+  <!-- 5초 남았을 때 시계음 연주 -->
+  <div id="tool">
+    <!-- 게임 시작 버튼, 상황, 설명 포함 -->
+    <span id = "start" onclick="start(this)">게임 시작</span><br>
+    <!-- 게임이 시작되면 보이지 않고 게임이 끝나면 보임. -->
+    <span>남은수 : <span id="remainNum"></span></span><br>
+    <span>실패수 : <span id="failNum">0</span></span><br>
+    <span id="timeText">시간 <span id="time">0</span></span><br>
+    <span id="msg">게임이 진행될 예정입니다.</span>
+  </div>
+  <div id="game">
+    <!-- 가로 8 세로 3의 게임 창-->
+    <table>
+    <tr>
+      <td><img onclick = "eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td>
+      <td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td>
+      <td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td>
+    </tr>
+    <tr>
+      <td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td>
+      <td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td>
+      <td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td>
+    </tr>
+    <tr>
+      <td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td>
+      <td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td>
+      <td><img onclick="eggClick(this)" src="img1.gif"></td><td><img onclick="eggClick(this)" src="img1.gif"></td>
+    </tr>
+    </table>
+  </div>
+  <div id="big"></div>
+  <!-- 게임이 끝나면 GAME OVER나 GAME CLEAR를 크게 보여줌. -->
+</body>
+</html>

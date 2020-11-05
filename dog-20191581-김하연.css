@@ -1,0 +1,49 @@
+body{
+  background-color : #2A4421;
+}
+
+h2 {
+  text-align : center;
+  color : white;
+}
+/* 제목은 중앙 정렬, 흰 글씨 */
+hr {
+  border : 1px solid white;
+  margin-bottom : 2em;
+}
+/* 흰 선에 밑에 공백 추가. */
+#tool {
+  width : 15%;
+  float : left;
+}
+/* tool은 윈도우의 15프로 차지, 왼쪽으로 붙음. */
+#game {
+  width : 85%;
+  float: left;
+}
+/* 게임 창은 윈도우의 나머지 85프로 차지. */
+div#tool > span {
+  display : inline-block;
+  width : 90%;
+  background-color : mistyrose;
+  margin-bottom : 0.3em;
+}
+/* div#tool 바로 밑 span들은 약간의 공백이 있는 채로 배경색을 가짐. */
+table {
+  margin-left : 0.5em;
+  background-color : #CEFF84;
+  /* img 사이를 같은 색으로 채워줌 */
+}
+td{
+  padding:30px;
+  /* 그림들 사이 간격 조정 */
+}
+#big {
+  position  : absolute;
+  top :300px;
+  left : 500px;
+  color : red;
+  font-size : 5em;
+  text-shadow : 0 0 1px black;
+/* 맨 마지막으로 출력되는 글자는 절대위치로 지정 */
+}
